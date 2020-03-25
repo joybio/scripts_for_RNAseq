@@ -1,0 +1,6 @@
+#step1
+perl NAseq_step1.pl
+#step2
+sh RNAseq_step2.sh
+#step3
+Rscript RNAseq_step3.sh
