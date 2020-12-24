@@ -46,7 +46,7 @@ data.close()
 for i in index_dict.keys():
         index1 = index_dict1[i]
 	index2 = index_dict2[i]
-        os.system("cutadapt -a {} -A {} -j 10 -e 0.1 -O 5 -m 50 -o {}.trimmed.R1.fq.gz -p {}.pre_trimmed.R2.fq.gz {}_combined.R1.fastq.gz {}_combined.R2.fastq.gz".format(index1,index2,i,i,i,i))
+        os.system("cutadapt -a {} -A {} -j 10 -e 0.1 -O 5 -m 50 -o {}.trimmed.R1.fq.gz -p {}.pre_trimmed.R2.fq.gz {}_combined_R1.fastq.gz {}_combined_R2.fastq.gz".format(index1,index2,i,i,i,i))
 #remove 3_nt in R2
 os.system("ls *.pre_trimmed.R2.fq.gz | while read id;do(trimmomatic SE $id $(basename $id 'pre_trimmed.R2.fq.gz')trimmed.R2.fq.gz HEADCROP:3);done")
 os.system("mkdir sfastqc_results")
