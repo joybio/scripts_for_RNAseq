@@ -47,8 +47,8 @@ for i in data:
 data.close()
 
 for i in index_dict.keys():
-        index = sample_dict[i]
-        os.system("cutadapt -a {} -A {} -j 10 -e 0.1 -O 5 -m 11 -o {}.trimmed.R1.fq.gz -p {}.trimmed.R2.fq.gz {}_combined.R1.fastq.gz {}_combined.R2.fastq.gz".format(index,SR_primer,i,i,i))
+        index = index_dict[i]
+        os.system("cutadapt -a {} -A {} -j 10 -e 0.1 -O 5 -m 11 -o {}.trimmed.R1.fq.gz -p {}.trimmed.R2.fq.gz {}_combined_R1.fastq.gz {}_combined_R2.fastq.gz".format(index,SR_primer,i,i,i))
 
 os.system("mkdir sfastqc_results")
 #QC
